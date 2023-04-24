@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-function BookCreate({onCreate}){
+function BookCreate({onSubmit}){
     const [title, setTitle] = useState('');
 
     const handleChange= (event) => {
@@ -9,7 +9,7 @@ function BookCreate({onCreate}){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onCreate(title);
+        onSubmit(title);
         setTitle('');
     };
 
